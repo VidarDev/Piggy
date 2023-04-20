@@ -2,10 +2,10 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Hôte : localhost:8889
--- Généré le : mer. 05 avr. 2023 à 14:56
--- Version du serveur : 5.7.39
--- Version de PHP : 8.2.0
+-- Hôte : 127.0.0.1:3307
+-- Généré le : jeu. 20 avr. 2023 à 12:34
+-- Version du serveur : 10.10.2-MariaDB
+-- Version de PHP : 8.0.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,8 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `SP_Comptable`
+-- Base de données : `sp_comptable`
 --
-
-CREATE DATABASE IF NOT EXISTS SP_Comptable;
-USE SP_Comptable;
-
-
 
 -- --------------------------------------------------------
 
@@ -38,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `categories` (
   `nom_categorie` varchar(50) DEFAULT NULL,
   `id_type_comptable` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_c
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
 --
 -- Déchargement des données de la table `categories`
@@ -111,7 +106,7 @@ CREATE TABLE IF NOT EXISTS `type_comptable` (
   `nom_type_comptable` varchar(50) DEFAULT NULL,
   `coefficient` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
 --
 -- Déchargement des données de la table `type_comptable`
