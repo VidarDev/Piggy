@@ -1,0 +1,182 @@
+html body {
+    &.create,
+    &.list,
+    &.login {
+        .modal {
+            .modal-dialog.card {
+                .modal-content {
+                    row-gap: 1rem;
+                    background-color: transparent;
+                    border: none;
+                    border-radius: 0;
+                    outline: 0;
+
+                    .modal-header {
+                        padding: 0;
+                        border-bottom: none;
+                        border-top-left-radius: 0;
+                        border-top-right-radius: 0;
+
+                        .model-title {
+                            font-size: clamp(
+                                1.25rem,
+                                1.1923rem + 0.2564vw,
+                                1.5rem
+                            );
+                        }
+                    }
+
+                    .modal-body {
+                        padding: 0;
+                        font-size: clamp(
+                            0.875rem,
+                            0.8287rem + 0.2469vw,
+                            1.125rem
+                        );
+                        line-height: 1.33;
+                    }
+
+                    .modal-footer {
+                        padding: 0;
+                        background-color: transparent;
+                        border-top: none;
+                        border-top-left-radius: 0;
+                        border-top-right-radius: 0;
+                    }
+                }
+            }
+        }
+
+        .input {
+            position: relative;
+            width: 100%;
+
+            &--inverted {
+                .input {
+                    &__field {
+                        border: 3px solid $color-light;
+                        color: $color-light;
+                    }
+
+                    &__label {
+                        background-color: $color-dark;
+                        color: $color-light;
+                    }
+                }
+            }
+
+            &__field {
+                box-sizing: border-box;
+                display: block;
+                width: 100%;
+                border: 3px solid $color-dark;
+                padding: calc($size-bezel * 1.5) $size-bezel;
+                color: $color-text;
+                background-color: transparent;
+                border-radius: $size-radius;
+
+                &:focus,
+                &:not(:placeholder-shown) {
+                    & + .input__label {
+                        transform: translate(0.25rem, -65%) scale(0.8);
+                        color: $color-accent;
+                    }
+                }
+            }
+
+            &__label {
+                position: absolute;
+                left: 0;
+                top: 0;
+                padding: calc($size-bezel * 0.75) calc($size-bezel * 0.5);
+                margin: calc($size-bezel * 0.75 + 3px) calc($size-bezel * 0.5);
+                white-space: nowrap;
+                transform: translate(0, 0);
+                transform-origin: 0 0;
+                background-color: $color-background;
+                transition: transform 120ms ease-in;
+                font-weight: $weight_bold;
+                line-height: 1.33;
+            }
+        }
+
+        ::-webkit-calendar-picker-indicator {
+            background-color: $color-accent;
+            padding: 5px;
+            cursor: pointer;
+            border-radius: 2px;
+        }
+
+        .btn {
+            &--inverted {
+                color: $color-light;
+
+                &[type='reset'] {
+                    background-color: $color-dark;
+                }
+
+                &:hover {
+                    color: $color-text;
+                    background-color: $color-accent;
+                }
+            }
+
+            display: flex;
+            height: fit-content;
+            color: $color-text;
+            padding: $size-bezel calc($size-bezel * 2);
+            background-color: $color-accent;
+            border-radius: $size-radius;
+            font-weight: $weight_bold;
+            border: none;
+            transition: color 0.4s ease-in;
+
+            &:hover {
+                transition: color 0.4s ease-in;
+                background-color: $color-accent;
+                color: $color-light;
+            }
+
+            &[type='reset'] {
+                background-color: $color-background;
+                font-weight: $weight;
+
+                &:hover {
+                    background-color: $color-accent;
+                }
+            }
+        }
+
+        select {
+            background: url('data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9JzEwcHgnIHdpZHRoPScxMHB4JyB2aWV3Qm94PScwIDAgMTYgMTYnIGZpbGw9JyNmYWI3MDAnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTcuMjQ3IDExLjE0IDIuNDUxIDUuNjU4QzEuODg1IDUuMDEzIDIuMzQ1IDQgMy4yMDQgNGg5LjU5MmExIDEgMCAwIDEgLjc1MyAxLjY1OWwtNC43OTYgNS40OGExIDEgMCAwIDEtMS41MDYgMHonLz48L3N2Zz4K')
+                no-repeat;
+            background-position: calc(100% - 0.75rem) center !important;
+            appearance: none !important;
+            padding-right: 2rem !important;
+
+            option {
+                color: $color-text !important;
+            }
+        }
+
+        .card {
+            background-color: $color-background;
+            padding: calc(4 * $size-bezel);
+            border-radius: $size-radius;
+            border: 3px solid $color-dark;
+            box-shadow: 0.5rem 0.5rem 0 $color-dark;
+
+            &--inverted {
+                background-color: $color-dark;
+                border: 3px solid $color-signal;
+                box-shadow: 0.5rem 0.5rem 0 $color-signal;
+            }
+
+            &--accent {
+                background-color: $color-signal;
+                border: 3px solid $color-dark;
+                box-shadow: 0.5rem 0.5rem 0 $color-dark;
+            }
+        }
+    }
+}

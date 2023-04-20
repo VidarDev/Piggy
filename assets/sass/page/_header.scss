@@ -1,0 +1,57 @@
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: calc(
+        clamp(3rem, 2.5385rem + 2.0513vw, 5rem) +
+            calc(clamp(1rem, 0.7692rem + 1.0256vw, 2rem) * 2)
+    );
+    padding: clamp(1rem, 0.7692rem + 1.0256vw, 2rem)
+        clamp(1.5rem, 1.1538rem + 1.5385vw, 3rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $color-background;
+    z-index: 10;
+
+    .logo {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+
+        span {
+            font-size: clamp(2rem, 1.6296rem + 1.9753vw, 4rem);
+            line-height: 1.33;
+            font-weight: $weight_bold;
+        }
+
+        img {
+            width: clamp(3rem, 2.5385rem + 2.0513vw, 5rem);
+            height: clamp(3rem, 2.5385rem + 2.0513vw, 5rem);
+        }
+    }
+
+    .mysql_connexion {
+        display: flex;
+        flex-wrap: nowrap;
+        width: fit-content;
+        justify-content: flex-end;
+        align-items: center;
+
+        .indicator {
+            width: 20px;
+            height: 20px;
+            border-radius: 999px;
+            margin-left: 10px;
+        }
+
+        @media screen and (max-width: $breakpoints-xs) {
+            span {
+                display: none;
+            }
+        }
+    }
+}

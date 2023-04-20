@@ -1,0 +1,47 @@
+html body.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    padding: 4vw;
+
+    @supports (height: 100dvh) {
+        height: 100dvh !important;
+    }
+
+    @supports not (height: 100dvh) {
+        height: 100vh !important;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        h1 {
+            margin-bottom: 16px;
+            color: $color-light;
+        }
+
+        img {
+            width: 50%;
+            height: auto;
+            aspect-ratio: 1/1;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+            width: 80%;
+
+            button {
+                margin-top: 1rem;
+            }
+        }
+    }
+}

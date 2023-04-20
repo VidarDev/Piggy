@@ -1,0 +1,20 @@
+{
+    "short_name": "Piggy",
+    "name": "Piggy",
+    "icons": [
+        {
+            "src": "./favicon.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "./favicon.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#FFC727",
+    "background_color": "#37474F"
+}
